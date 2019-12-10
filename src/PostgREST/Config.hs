@@ -111,6 +111,7 @@ corsPolicy req = case lookup "origin" headers of
       corsOrigins = Just ([origin], True)
     , corsRequestHeaders = "Authentication":accHeaders
     , corsExposedHeaders = Just [
+        "Cache-Control",
         "Content-Encoding", "Content-Location", "Content-Range", "Content-Type"
       , "Date", "Location", "Server", "Transfer-Encoding", "Range-Unit"
       ]
